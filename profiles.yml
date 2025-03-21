@@ -1,0 +1,12 @@
+csds397_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: mysql
+      server: localhost
+      port: 3306
+      database: csds397_dbt
+      schema: csds397_dbt
+      username: root
+      password: 
+      threads: 4

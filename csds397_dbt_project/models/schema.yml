@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: 01_average_salary_by_department
+    columns:
+      - name: department
+        tests:
+          - not_null
+      - name: avg_salary
+        tests:
+          - not_null
+
+  - name: 02_tenure_to_salary
+    columns:
+      - name: years_experience
+        tests:
+          - not_null
+      - name: avg_salary
+        tests:
+          - not_null
+
+  - name: 03_perfomance_by_salary
+    columns:
+      - name: performance_rating
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Low Performers", "Average Performers", "High Performers"]
+      - name: avg_salary
+        tests:
+          - not_null
+
+  - name: 04_performance_by_start_year
+    columns:
+      - name: start_year
+        tests:
+          - not_null
+      - name: average_performance_rating
+        tests:
+          - not_null
+
+  - name: 05_salary_by_start_year
+    columns:
+      - name: start_year
+        tests:
+          - not_null
+      - name: avg_salary
+        tests:
+          - not_null
+      - name: min_salary
+        tests:
+          - not_null
+      - name: max_salary
+        tests:
+          - not_null
+
+  - name: 06_employee_hire_by_start_year
+    columns:
+      - name: start_year
+        tests:
+          - not_null
+      - name: hire_count
+        tests:
+          - not_null
